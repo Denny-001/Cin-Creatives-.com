@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /includes/
+Disallow: /assets/
+Disallow: /tmp/
+
+Sitemap: http://localhost/cincreatives/sitemap.xml

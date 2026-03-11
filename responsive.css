@@ -1,0 +1,464 @@
+/* ============================================================
+   CIN CREATIVES — RESPONSIVE CSS
+   ============================================================ */
+
+/* ====== BREAKPOINTS ======
+   xl:  1280px
+   lg:  1024px
+   md:  768px
+   sm:  480px
+============================== */
+
+/* ---------- LARGE SCREENS (≤ 1280px) ---------- */
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1100px;
+    }
+
+    .hero-stats {
+        gap: 2rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.8fr 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+/* ---------- LARGE TABLET (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 960px;
+        padding: 0 1.5rem;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    /* Nav */
+    .navbar-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: rgba(15, 15, 15, 0.98);
+        backdrop-filter: blur(24px);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 100px 2rem 3rem;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-left: 1px solid rgba(255, 255, 255, 0.06);
+        z-index: 999;
+    }
+
+    .navbar-menu.open {
+        right: 0;
+    }
+
+    .nav-link {
+        font-size: 1.05rem;
+        padding: 0.75rem 0;
+        width: 100%;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+
+    .navbar-toggle.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .navbar-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .navbar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+    }
+
+    .navbar-overlay.active {
+        display: block;
+    }
+
+    .navbar-actions .btn {
+        display: none;
+    }
+
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        min-width: auto;
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    /* Grids */
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+
+    .counter-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    /* About page */
+    .about-story-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ---------- TABLET (≤ 768px) ---------- */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: clamp(2.2rem, 7vw, 3.5rem);
+    }
+
+    .display-1 {
+        font-size: clamp(2.5rem, 9vw, 4rem);
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding: 120px 0 60px;
+    }
+
+    .hero-col-left {
+        text-align: center;
+    }
+
+    .hero-description {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    .hero-canvas-wrap {
+        display: none;
+    }
+
+    /* Grids */
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .counter-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Form */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Pricing */
+    .pricing-card {
+        padding: 2rem;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-bottom-links {
+        justify-content: center;
+    }
+
+    /* Page hero */
+    .page-hero {
+        padding: 120px 0 60px;
+        text-align: center;
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Tabs */
+    .tabs-nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 16px 0;
+    }
+
+    /* Process */
+    .process-step {
+        grid-template-columns: 60px 1fr;
+        gap: 1.25rem;
+    }
+
+    .step-num {
+        width: 60px;
+        height: 60px;
+        font-size: 1.1rem;
+    }
+
+    .process-step:not(:last-child)::before {
+        left: 30px;
+        top: 60px;
+    }
+
+    /* Services */
+    .service-card {
+        padding: 2rem;
+    }
+}
+
+/* ---------- MOBILE (≤ 480px) ---------- */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .counter-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .btn-lg {
+        padding: 15px 28px;
+        font-size: 0.95rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        justify-content: center;
+    }
+
+    .pricing-amount .pricing-price {
+        font-size: 2.8rem;
+    }
+
+    .counter-val {
+        font-size: 2.8rem;
+    }
+
+    .filter-btns {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 7px 14px;
+        font-size: 0.8rem;
+    }
+
+    #back-to-top {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 42px;
+        height: 42px;
+    }
+
+    .blog-meta {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .testimonial-card {
+        padding: 1.75rem;
+    }
+
+    .service-card {
+        padding: 1.75rem;
+    }
+
+    .glass-card {
+        padding: 1.75rem;
+    }
+}
+
+/* ---------- ULTRA SMALL (≤ 360px) ---------- */
+@media (max-width: 360px) {
+    .display-1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-stats {
+        gap: 1rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .navbar-logo .logo-text {
+        font-size: 1.2rem;
+    }
+}
+
+/* ---------- PRINT STYLES ---------- */
+@media print {
+
+    .navbar,
+    .footer,
+    #back-to-top,
+    #page-loader,
+    .cursor,
+    .cursor-follower {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .section {
+        padding: 20px 0;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+    }
+}
+
+/* ---------- LANDSCAPE MOBILE ---------- */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding-top: 80px;
+    }
+
+    .page-hero {
+        padding: 100px 0 40px;
+    }
+}
+
+/* ---------- HIGH DENSITY (Retina) ---------- */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .navbar-logo .logo-icon {
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+/* ====== RESPONSIVE UTILITIES ====== */
+.hide-mobile {}
+
+.show-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+
+    .show-mobile {
+        display: block;
+    }
+}
+
+/* ====== RESPONSIVE TYPOGRAPHY ====== */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: clamp(1.4rem, 5vw, 2rem);
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .cta-title {
+        font-size: clamp(1.6rem, 6vw, 2.5rem);
+    }
+}
